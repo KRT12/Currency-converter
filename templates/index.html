@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block title %}welcome {{ name }}{% endblock %}
+{% block main %}
+<h1>Currency Converter</h1>
+<form id="ex" >
+	<style type="text/css">
+		h1{
+			    font-size: 36px;
+    text-align: center;
+    font-style: oblique;
+    font-family: monospace;
+    color: #11ad03;
+		}
+		#ip{
+
+    position: relative;
+		}
+
+		select{
+	width: 140px;
+    color: #dc0000;
+    background-color: #abc4ff;
+    padding-left: 29px;
+    height: 45px;
+    font-size: 30px;
+    border-radius: 10px;
+		}
+		#re{
+		margin-left: 287px;
+    margin-top: -71px;
+    font-size: 30px;
+    font-style: italic;
+    font-family: monospace;
+    color: black;
+		}
+		body{
+		padding-left: 45px;
+    background-color: #f1ffba;
+	</style>
+	<br>
+	<div id ='ip'>
+		<select name='ia', id='base' >
+	{% for i in b %}
+
+	<option value= '{{ i }}' >{{ i }}</option>
+	{% endfor %}
+</select><br><br>
+
+<select name='ia', class="ccw" id='convert' >
+	{% for i in b %} 
+		
+		<option value= '{{ i }}' >{{ i }}</option>
+		
+	{% endfor %}
+
+</select>
+		<div id="re">
+
+	</div>
+	</div>
+
+
+		<br><br>
+
+
+
+</form>
+
+<div id ="ter"></div>
+{% endblock %}
